@@ -1,0 +1,6 @@
+@use 'sass:meta';
+
+@layer swiper {
+  @include meta.load-css("swiper/scss");
+  @include meta.load-css("swiper/scss/pagination");
+}

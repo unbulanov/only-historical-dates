@@ -1,0 +1,128 @@
+@use './swiper.scss';
+@use "./variables.scss" as *;
+
+@layer swiper, themes-slider;
+
+@layer themes-slider {
+  .themes-slider {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: $mobile) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .themes-slider__controls {
+    align-self: start;
+    position: relative;
+    margin: 0 0 auto 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and (max-width: $mobile) {
+      z-index: 3;
+      margin: 0;
+      gap: 10px;
+      padding: 0 20px;
+    }
+  }
+
+  .themes-slider__fraction {
+    @media screen and (max-width: $mobile) {
+      font-size: $fs-xs;
+    }
+  }
+
+  .themes-slider__buttons {
+    display: flex;
+    gap: 20px;
+
+    @media screen and (max-width: $mobile) {
+      gap: 8px;
+    }
+  }
+
+  .themes-slider__button {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+
+    cursor: pointer;
+    background-color: $bg-primary;
+    border-radius: 50%;
+    border: 1px solid $buttons-border-color;
+
+    &::after {
+      content: "";
+      width: 10px;
+      height: 22px;
+      background-image: url('../icons/arrow-desktop.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    &--next {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:disabled {
+      cursor: default;
+      opacity: 0.5;
+    }
+
+    @media screen and (max-width: $mobile) {
+      width: 25px;
+      height: 25px;
+
+      &::after {
+        content: "";
+        width: 8px;
+        height: 16px;
+        background-image: url('../icons/arrow-mobile.svg');
+      }
+    }
+  }
+
+  .themes-slider__slider {
+    --swiper-pagination-color: #{$dark-blue};
+    --swiper-pagination-bullet-inactive-color: #{$dark-blue};
+    --swiper-pagination-bullet-inactive-opacity: 0.4;
+
+    width: 100%;
+    position: relative;
+
+    & .swiper-pagination {
+      display: none;
+    }
+
+    @media screen and (max-width: $mobile) {
+      flex-grow: 1;
+      overflow: visible;
+
+      & .swiper-pagination {
+        position: absolute;
+        bottom: -55px;
+        display: block;
+      }
+    }
+  }
+
+  .themes-slider__slide {
+    display: flex;
+    flex-direction: column;
+
+    // Fix swiper transition of opacity property
+    &.swiper-slide-active {
+      transition-property: all;
+    }
+  }
+}

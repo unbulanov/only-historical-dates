@@ -1,0 +1,142 @@
+@use "./variables.scss" as *;
+
+.historical-dates {
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+
+  background-color: $bg-primary;
+}
+
+.historical-dates__inner {
+  position: relative;
+  flex-grow: 1;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+
+  border-right: 1px solid $lines-color;
+  border-left: 1px solid $lines-color;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    background: $lines-color;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media screen and (max-width: $mobile) {
+    border: none;
+
+    padding: 50px 0 0 0;
+    
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.historical-dates__title {
+  padding: 0 0 0 78px;
+  margin: 0 0 96px 0;
+  position: relative;
+
+  font-size: $fs-xl;
+  line-height: 120%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background: $main-gradient;
+  }
+
+  @media screen and (max-width: $mobile) {
+    padding: 0 0 0 20px;
+    margin: 0 0 56px 0;
+
+    font-size: $fs-m;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.historical-dates__main-dates {
+  position: relative;
+  align-self: center;
+  z-index: 0;
+  margin: 0 0 50px 0;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+
+  font-size: $fs-xxl;
+  font-weight: 700;
+  letter-spacing: -4px;
+  line-height: 80%;
+
+  user-select: none;
+
+  @media screen and (max-width: 1300px) {
+    font-size: 6.5rem;
+  }
+
+  @media screen and (max-width: $mobile) {
+    gap: normal;
+    max-width: 400px;
+    justify-content: space-between;
+    margin: 0 0 20px 0;
+
+    letter-spacing: -1.12px;
+    font-size: $fs-xl;
+  }
+}
+
+.historical-dates__date {
+  margin: 0;
+
+  &--first {
+    color: $iris;
+
+    @media screen and (max-width: $mobile) {
+      color: $royal-blue;
+    }
+  }
+
+  &--last {
+    color: $fuchsia;
+  }
+}
+
+.historical-dates__circle {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media screen and (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.historical-dates__slider {
+  flex-grow: 1;
+
+  @media screen and (max-width: $mobile) {
+    padding: 0 0 13px 0;
+  }
+}

@@ -1,0 +1,132 @@
+@use './swiper.scss';
+@use "./variables.scss" as *;
+
+@layer swiper, dates-slider;
+
+@layer dates-slider {
+  .dates-slider {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media screen and (max-width: $mobile) {
+      justify-content: start;
+    }
+  }
+
+  .dates-slider__title {
+    margin: 0;
+    display: none;
+
+    @media screen and (max-width: $mobile) {
+      padding: 0 0 10px 0;
+      font-size: $fs-s;
+      display: block;
+
+      border-bottom: 1px solid #C7CDD9;
+    }
+  }
+
+  .dates-slider__slider {
+    width: calc(100% - 160px);
+    margin: 0 auto;
+    position: relative;
+
+    user-select: none;
+
+    @media screen and (max-width: $mobile) {
+      margin-top: 15px;
+      width: 100%;
+    }
+  }
+
+  .dates-slider__slide {
+    max-width: 400px;
+
+    &:not(:last-child) {
+      margin: 0 80px 0 0;
+    }
+
+    @media screen and (max-width: $mobile) {
+      width: 166px;
+      padding: 0 0 0 20px;
+
+      &:not(:last-child) {
+        margin: 0;
+      }
+    }
+  }
+  
+  .dates-slider__date-title {
+    margin: 0 0 15px 0;
+  
+    color: $royal-blue;
+    font-size: $fs-l;
+    font-family: $font-family-secondary;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    @media screen and (max-width: $mobile) {
+      font-size: $fs-s;
+      line-height: 120%;
+    }
+  }
+
+  .dates-slider__button {
+    padding: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    filter: drop-shadow(0px 0px 15px transparentize($dark-blue, 0.9));
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      width: 8px;
+      height: 13px;
+      background-image: url('../icons/arrow-dates.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    &--prev {
+      left: 2%;
+
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+
+    &--next {
+      right: 2%;
+    }
+
+    &:disabled {
+      display: none;
+    }
+
+    @media screen and (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  .dates-slider__date-text {
+    margin: 0;
+
+    @media screen and (max-width: $mobile) {
+      line-height: 145%;
+      font-size: $fs-xs;
+    }
+  }
+}

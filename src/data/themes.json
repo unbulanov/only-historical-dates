@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "title": "Литература",
+    "dates": [
+      {
+        "date": 2016,
+        "text": "1Lorem ipsum dolor sit amet"
+      },
+      {
+        "date": 2017,
+        "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit Quaerat, eaque"
+      },
+      {
+        "date": 2017,
+        "text": "Lorem ipsum dolor sit"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Искусство",
+    "dates": [
+      {
+        "date": 2000,
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit"
+      },
+      {
+        "date": 2003,
+        "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit Quaerat, eaque"
+      },
+      {
+        "date": 2004,
+        "text": "Lorem ipsum dolor sit amet consectetur"
+      },
+      {
+        "date": 2005,
+        "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit Quaerat, eaque!"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Кино",
+    "dates": [
+      {
+        "date": 1995,
+        "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit Quaerat, eaque!"
+      },
+      {
+        "date": 1996,
+        "text": "Lorem ipsum dolor sit amet consectetur"
+      },
+      {
+        "date": 1997,
+        "text": "Lorem ipsum dolor sit"
+      },
+      {
+        "date": 1998,
+        "text": "1Lorem ipsum dolor sit amet"
+      },
+      {
+        "date": 2005,
+        "text": "1Lorem ipsum dolor sit amet"
+      },
+      {
+        "date": 2018,
+        "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit Quaerat, eaque!"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Музыка",
+    "dates": [
+      {
+        "date": 1951,
+        "text": "1Lorem ipsum, dolor sit amet consectetur adipisicing elit Quaerat, eaque!"
+      },
+      {
+        "date": 1955,
+        "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit Quaerat, eaque!"
+      },
+      {
+        "date": 1956,
+        "text": "Lorem ipsum dolor sit"
+      },
+      {
+        "date": 1966,
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit"
+      },
+      {
+        "date": 1970,
+        "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit Quaerat, eaque!"
+      },
+      {
+        "date": 1970,
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Спорт",
+    "dates": [
+      {
+        "date": 2021,
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit"
+      },
+      {
+        "date": 2022,
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Технологии",
+    "dates": [
+      {
+        "date": 1999,
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit"
+      },
+      {
+        "date": 2000,
+        "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit Quaerat, eaque!"
+      },
+      {
+        "date": 2001,
+        "text": "Lorem ipsum dolor sit"
+      }
+    ]
+  }
+]

@@ -1,0 +1,31 @@
+// Device sizes (max)
+$mobile: 767px;
+$desktop: 1920px;
+
+$mobile-margin: 20px;
+$desktop-margin: 8%;
+
+// Colors 
+$bg-primary: #F4F5F9;
+$text-primary: #42567A;
+
+$royal-blue: #3877EE;
+$dark-blue: #42567A;
+$iris: #5D5FEF;
+$fuchsia: #EF5DA8;
+$lines-color: transparentize($dark-blue, 0.9);
+$buttons-border-color: transparentize($dark-blue, 0.5);
+
+$main-gradient: linear-gradient($royal-blue, $fuchsia);
+
+// Fonts
+$font-family-primary: 'PT Sans', 'Arial', sans-serif;
+$font-family-secondary: 'Bebas Neue', 'Arial', sans-serif;
+
+$fs-xs: 0.7rem;
+$fs-s: 0.8rem;
+$fs-m: 1rem;
+$fs-l: 1.25rem;
+$fs-xl: 2.8rem;
+$fs-xxl: 10rem;
+
